@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href= "styles/styles.css">
+  <title>Blog Web Application</title>
+</head>
+<body>
+  <div class="container">
+    <h1>It's just another blog =D</h1>
+    <button class="menu-button" id="show-form">Create Post</button>
+    <button class="menu-button" id="show-posts">Show Posts</button>
+
+    <form id="create-post" method="POST" action="/create-post">
+      <input type="text" name="title" placeholder="Title" required><br>
+      <textarea name="content" placeholder="Content" required></textarea><br>
+      <button type="submit">Create Post</button>
+    </form>
+    <div class="posts">
+      <% if (posts.length > 0 ) { %>
+          <% posts.forEach(post => { %>
+              <div class="post">
+
+                <div class="post-content">
+                  <h2><%= post.title %></h2>
+                  <p><%= post.content %></p>
+                </div>
+
+                <div class="post-buttons">
+                  <form action="/edit" method="POST"> 
+                    <input type="hidden" name="postId" value="<%= post.id %>"> 
+                    <button class="post-button" type="submit">Edit</button>
+                  </form>
+
+                  <form action="/delete" method="POST">
+                    <input type="hidden" name="postId" value="<%= post.id %>"> 
+                    <button class="post-button" type="submit">Delete</button>
+                  </form>
+                </div>
+                
+              </div>
+          <% }); %>
+      <% } %>
+    </div>
+  </div>
+    <script src="../scripts/form.js"></script>
+</body>
+</html>

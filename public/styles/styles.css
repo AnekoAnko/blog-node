@@ -1,0 +1,75 @@
+body {
+    background-color: #d9f3f3;
+    opacity: 1;
+    background: linear-gradient(135deg, #75cbe555 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(225deg, #75cbe5 25%, transparent 25%) -40px 0/ 80px 80px, linear-gradient(315deg, #75cbe555 25%, transparent 25%) 0px 0/ 80px 80px, linear-gradient(45deg, #75cbe5 25%, #d9f3f3 25%) 0px 0/ 80px 80px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 10px; 
+}
+
+.container {
+    text-align: center;
+}
+
+.post {
+    width: 500px;
+    margin: 20px auto;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-content h2 {
+    margin: 0;
+    text-align: left;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.post-content p {
+    margin: 0;
+    text-align: left;
+    word-wrap: break-word; 
+
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: right;
+}
+
+.menu-button {
+    border: none;
+    background-color: inherit;
+    font-size: 25px;
+}
+
+.menu-button:hover {
+    color: gray;
+}
+
+.post-button {
+    border: none;
+    background-color: inherit;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.post-button:hover {
+    color: gray;
+}
+
+#create-post {
+    display: none;
+}
+
